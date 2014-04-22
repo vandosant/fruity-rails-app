@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   put '/fruits/:id', to: 'fruits#update'
 
+  delete '/fruits/:id', to: 'fruits#delete'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

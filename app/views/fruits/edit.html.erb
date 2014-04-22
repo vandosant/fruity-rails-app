@@ -3,3 +3,8 @@
   <label>Name<input type="text" name="name" /></label>
   <button type="submit" value="Update Fruit">Update Fruit</button>
 </form>
+
+<form action="/fruits/<%=@fruit_id%>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <button type="submit" value="Delete">Delete Fruit</button>
+</form>

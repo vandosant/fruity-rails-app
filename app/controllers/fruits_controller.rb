@@ -20,4 +20,10 @@ class FruitsController < ApplicationController
     fruit.update(:name => params[:name])
     redirect_to '/'
   end
+
+  def delete
+    fruit = Fruit.find(params[:id])
+    fruit.delete
+    redirect_to '/'
+  end
 end

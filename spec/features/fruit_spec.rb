@@ -32,4 +32,21 @@ feature 'fruits' do
     expect(page).to have_no_content "Apple"
     expect(page).to have_content "Green Orange"
   end
+
+  scenario 'user can delete a fruit' do
+    visit '/'
+
+    click_link "Create"
+
+    fill_in :name, with: "Pear"
+    fill_in :description, with: "Soft"
+
+    click_on "Create Fruit"
+
+    click_on "edit_pear"
+
+    click_on "Delete Fruit"
+
+    expect(page).to have_no_content "Pear"
+  end
 end
