@@ -1,3 +1,3 @@
-class Fruit < ActiveRecord::Migration
+class Fruit < ActiveRecord::Base
 
 end

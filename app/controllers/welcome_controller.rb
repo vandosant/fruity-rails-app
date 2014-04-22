@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @fruits = Fruits.all
+    @fruits = Fruit.all
   end
 end
