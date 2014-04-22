@@ -1,5 +1,5 @@
 <a href="/fruits/new">Create</a>
 
 <% @fruits.each do |fruit| %>
-  <p>Name: <%= fruit.name %></p>
+  <p>Name: <%= fruit.name %> - <a href="/fruits/edit/<%=fruit.id%>" id="edit_<%=fruit.name.downcase%>">Edit</a></p>
 <% end %>
