@@ -1,5 +1,7 @@
 %a{:href => "/fruits/new"} Create
 
-- @fruits.each do |fruit|
-  %p= "Name: #{fruit.name}"
-  %a{:href => "/fruits/edit/#{fruit.id}", :id => "edit_#{fruit.name.downcase}"} Edit
+%p
+  - @fruits.each do |fruit|
+    = "Name: #{fruit.name}"
+    %a{:href => "/fruits/edit/#{fruit.id}", :id => "edit_#{fruit.name.downcase}"} Edit
+    %br
