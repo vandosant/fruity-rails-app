@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   put '/bands/:id', to: 'bands#update'
 
+  delete '/bands/:id', to: 'bands#delete'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

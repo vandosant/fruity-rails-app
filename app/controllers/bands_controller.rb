@@ -23,4 +23,10 @@ class BandsController < ApplicationController
     band.save
     redirect_to '/'
   end
+
+  def delete
+    band = Band.find(params[:id])
+    band.destroy
+    redirect_to '/'
+  end
 end
