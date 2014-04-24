@@ -18,6 +18,11 @@ Rails.application.routes.draw do
   get '/bands/new', to: 'bands#new'
 
   post '/bands', to: 'bands#create'
+
+  get '/bands/edit/:id', to: 'bands#edit'
+
+  put '/bands/:id', to: 'bands#update'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

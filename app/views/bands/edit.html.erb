@@ -1,0 +1,7 @@
+<form method="post" action="/bands/<%= @band_id %>">
+  <input type="hidden" name="_method" value="put">
+  <label>Band<input type="text" name="band" /></label>
+  <label>Genre<input type="text" name="genre" /></label>
+  <label>Founded<input type="text" name="founded" /></label>
+  <button type="submit" value="Create Fruit">Create Band</button>
+</form>

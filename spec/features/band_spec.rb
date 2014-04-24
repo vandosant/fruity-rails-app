@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature 'band management' do
-  scenario 'users can create a band' do
+  scenario 'users can create and edit a band' do
     visit '/'
 
     click_on "Add a band"
@@ -12,5 +12,13 @@ feature 'band management' do
     click_button "Create Band"
 
     expect(page).to have_content "MWRH"
+
+    click_link "edit_mwrh"
+
+    fill_in "band", with: "Mountain Warfare Ready Heroes"
+    click_button "Create Band"
+
+    expect(page).to have_content "Mountain Warfare Ready Heroes"
+    expect(page).to have_no_content "MWRH"
   end
 end

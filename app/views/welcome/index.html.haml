@@ -12,5 +12,5 @@
 %p
   - @bands.each do |band|
     = "#{band.band}"
-    %a{:href => "/band/edit/#{band.id}", :id => "edit_#{band.band.downcase}"} Edit
+    %a{:href => "/bands/edit/#{band.id}", :id => "edit_#{band.band.downcase}"} Edit
     %br
