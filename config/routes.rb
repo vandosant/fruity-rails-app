@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
   delete '/fruits/:id', to: 'fruits#delete'
 
+  get '/bands/new', to: 'bands#new'
+
+  post '/bands', to: 'bands#create'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

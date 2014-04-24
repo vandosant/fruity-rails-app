@@ -5,3 +5,12 @@
     = "Name: #{fruit.name}"
     %a{:href => "/fruits/edit/#{fruit.id}", :id => "edit_#{fruit.name.downcase}"} Edit
     %br
+
+%hr
+
+%a{:href => "/bands/new"} Add a band
+%p
+  - @bands.each do |band|
+    = "#{band.band}"
+    %a{:href => "/band/edit/#{band.id}", :id => "edit_#{band.band.downcase}"} Edit
+    %br
